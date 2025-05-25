@@ -9,7 +9,7 @@ function Terminal() {
         "| |\\  | | (__| | | | (_) | | (_| \\__ \\ | |__| (_) |",
         "|_| \\_|_|\\___|_| |_|\\___/|_|\\__,_|___/ |_____\\___/ ",
         " ",
-        "✨ Welcome ✨ – Type help for a list of supported commands.",
+        "✨ Welcome ✨ – Type ls for a list of supported commands.",
         " "
     ]);
     const [input, setInput] = useState('');
