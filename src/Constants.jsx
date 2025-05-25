@@ -1,19 +1,14 @@
 export const COMMANDS = [
-    'about', 'skills', 'cv', 'contact',
-    'bob', 'larry', 'party', 'beer', 'quest',
+    'about', 'skills', 'cv', 'contact', 'beer',
     'help', 'clear'
   ];
   
   export const RESPONSES = {
-    about: `I'm Nicholas Lo, a full-stack developer.`,
-    skills: 'React.js, Tailwind CSS, Vite, Node.js, Python',
-    cv: 'Download my CV at: https://your-domain.com/cv.pdf',
-    contact: 'Email: nicolatte@gmail.com | GitHub: github.com',
-    bob: '👋 Bob says hello!',
-    larry: '🍋 Larry is feeling zesty.',
-    party: '🎉 Let’s get this party started!',
+    about: `Hi, I’m Nicholas Lo, an Information Systems undergraduate at Singapore Management University. I'm passionate about leveraging technology to solve real-world problems and continuously exploring new ways to build impactful digital experiences.`,
+    skills: 'Python, SQL, PHP',
+    cv: 'CV work in progress, check back later.',
+    contact: 'Email: nicolatte@gmail.com | LinkedIn: https://www.linkedin.com/in/nickz_leh/',
     beer: '🍺 Cheers! Enjoy a cold one.',
-    quest: '🗡️ Your quest awaits... good luck!',
-    help: `Type any of: ${COMMANDS.join(', ')}`,
+    help: `Type any of:\n${COMMANDS.join('\n')}`,
     clear: ''
   };
