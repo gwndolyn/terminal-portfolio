@@ -1,15 +1,17 @@
 import React from 'react';
 
 const apps = [
-  { name: 'Terminal', icon: '/dock/terminal.png', link: '#' },
-  { name: 'VSCode', icon: '/dock/vscode.png', link: '#' },
-  { name: 'IntelliJ', icon: '/dock/intellij_macos_bigsur_icon_190061.png', link: '#' },
-  { name: 'Finder', icon: '/dock/finder_macos_bigsur_icon_190173.png', link: '#' },
-  { name: 'Settings', icon: '/dock/settings_macos_bigsur_icon_189754.png', link: '#' },
-  { name: 'Excel', icon: '/dock/microsoft_excel_macos_bigsur_icon_189980.png', link: '#' },
-  { name: 'Steam', icon: '/dock/steam_alt_macos_bigsur_icon_189698.png', link: '#' },
-  { name: 'Chrome', icon: '/dock/google_chrome_macos_bigsur_icon_190133.png', link: 'https://google.com' },
-  { name: 'Spotify', icon: '/dock/spotify_alt_macos_bigsur_icon_189704.png', link: '#' }
+    { name: 'Terminal', icon: '/dock/terminal.png', link: '#', active: true, reload: true, onClick: () => window.location.reload() },
+    { name: 'Linkedin', icon: '/dock/linkedin.png', link: 'https://www.linkedin.com/in/nickz-leh/', active: true, reload: true },
+    { name: 'File', icon: '/dock/file.png', link: 'https://www.linkedin.com/in/nickz-leh/', active: true, reload: true },
+  { name: 'VSCode', icon: '/dock/vscode.png'},
+  { name: 'IntelliJ', icon: '/dock/intellij_macos_bigsur_icon_190061.png' },
+  { name: 'Finder', icon: '/dock/finder_macos_bigsur_icon_190173.png' },
+  { name: 'Settings', icon: '/dock/settings_macos_bigsur_icon_189754.png' },
+  { name: 'Excel', icon: '/dock/microsoft_excel_macos_bigsur_icon_189980.png'},
+  { name: 'Steam', icon: '/dock/steam_alt_macos_bigsur_icon_189698.png' },
+  { name: 'Chrome', icon: '/dock/google_chrome_macos_bigsur_icon_190133.png'},
+  { name: 'Spotify', icon: '/dock/spotify_alt_macos_bigsur_icon_189704.png'}
 ];
 
 function Dock() {
