@@ -22,45 +22,44 @@ function Terminal() {
       if (cmd === 'clear') {
         setHistory([]);
       } else if (COMMANDS.includes(cmd)) {
-        setHistory(h => [...h, `$ ~ ${cmd}`, RESPONSES[cmd], '']);
+        setHistory(h => [...h, `➜ ~ ${cmd}`, RESPONSES[cmd], '']);
       } else {
-        setHistory(h => [...h, `$ ~ ${cmd}`, `command not found: ${cmd}`, '']);
+        setHistory(h => [...h, `➜ ~ ${cmd}`, `command not found: "${cmd}"`, '']);
       }
       setInput('');
     };
   
     return (
-      <div className="w-full max-w-2xl bg-black text-green-400 rounded-lg shadow-xl overflow-hidden font-mono">
-        {/* Mac title bar */}
-        <div className="flex items-center bg-gray-800 px-4 py-2">
+      <div className="w-[768px] h-[500px] bg-[#1e1e1e] text-gray-100 rounded-xl shadow-xl font-mono text-sm flex flex-col">
+        {/* Top Bar */}
+        <div className="flex items-center bg-[#2d2d2d] px-4 py-2 rounded-t-xl">
           <div className="flex space-x-2">
             <span className="w-3 h-3 bg-red-500 rounded-full"></span>
             <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
             <span className="w-3 h-3 bg-green-500 rounded-full"></span>
           </div>
-          <div className="flex-1 text-center text-gray-300 text-sm font-sans">
-            guest@aditya: ~
+          <div className="flex-1 text-center text-gray-300 text-xs font-sans">
+            guest@yourname: ~
           </div>
         </div>
   
-        {/* Terminal body */}
-        <div className="p-6">
+        {/* Terminal Scrollable Content */}
+        <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1">
           {history.map((line, i) => (
-            <div key={i} className={i === 0 ? 'whitespace-pre' : ''}>
+            <div key={i} className="whitespace-pre-wrap text-left">
               {line}
             </div>
           ))}
-  
-          <form onSubmit={handleSubmit} className="flex mt-2">
-            <span className="mr-2">$ ~</span>
+          <form onSubmit={handleSubmit} className="flex items-center">
+            <span className="mr-2 text-green-400">➜ ~</span>
             <input
-              className="flex-1 bg-transparent caret-green-400 focus:outline-none"
+              className="flex-1 bg-transparent caret-green-400 text-green-300 focus:outline-none"
               value={input}
               onChange={e => setInput(e.target.value)}
               autoFocus
+              spellCheck={false}
             />
           </form>
-  
           <div ref={endRef} />
         </div>
       </div>
