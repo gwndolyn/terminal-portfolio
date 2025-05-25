@@ -55,7 +55,7 @@ function LockScreen({ onUnlock }) {
       {/* Footer bottom zone */}
       <div className="absolute bottom-20 flex flex-col items-center space-y-3">
         <img
-          src="img/profile1.jpg"
+          src="img/profile2.jpg"
           alt="User"
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/30 shadow-md object-cover"
         />
