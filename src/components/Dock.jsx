@@ -3,7 +3,8 @@ import React from 'react';
 const apps = [
   { name: 'Terminal', icon: '/dock/terminal.png', link: '#', active: true, reload: true, onClick: () => window.location.reload() },
   { name: 'Linkedin', icon: '/dock/linkedin.png', link: 'https://www.linkedin.com/in/nickz-leh/', active: true },
-  { name: 'File', icon: '/dock/file.png', link: 'https://www.linkedin.com/in/nickz-leh/', active: true },
+  { name: 'Mail', icon: '/dock/mail.png', link: 'mailto:nicolatte25@gmail.com', active: true },
+  { name: 'Resume', icon: '/dock/file.png', link: 'https://www.linkedin.com/in/nickz-leh/', active: true },
   { name: 'VSCode', icon: '/dock/vscode.png' },
   { name: 'IntelliJ', icon: '/dock/intellij_macos_bigsur_icon_190061.png' },
   { name: 'Finder', icon: '/dock/finder_macos_bigsur_icon_190173.png' },
