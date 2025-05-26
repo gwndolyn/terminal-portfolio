@@ -38,7 +38,7 @@ function Terminal() {
     } else if (COMMANDS.includes(cmd)) {
       setHistory(h => [...h, `~ % ${cmd}`, RESPONSES[cmd], '']);
     } else {
-      setHistory(h => [...h, `~ % ${cmd}`, `command not found: "${cmd}"`, '']);
+      setHistory(h => [...h, `~ % ${cmd}`, <span className="text-red-400">command not found: "{cmd}"</span>, '']);
     }
     setInput('');
   };
