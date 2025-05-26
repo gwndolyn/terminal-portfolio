@@ -1,5 +1,5 @@
 export const COMMANDS = [
-    'about', 'skills', 'experience', 'cv', 'contact', 'beer', 'ls', 'clear'
+    'about', 'skills', 'experience', 'cv', 'contact', 'beer', 'ls', 'clear', 'iloveu'
   ];
   
   export const RESPONSES = {
@@ -10,6 +10,7 @@ export const COMMANDS = [
     cv: 'CV work in progress, check back later.',
     contact: 'Email: nicolatte25@gmail.com \nLinkedIn: https://www.linkedin.com/in/nickz_leh/',
     beer: '🍺 Cheers! Enjoy a cold one.',
-    ls: `Menu\n----\n${COMMANDS.join('\n')}`,
+    iloveu: 'ILOVEUUUUTOOOOMYBABYYDFSKJGHKHFG! ❤️',
+    ls: `Menu\n----\n${COMMANDS.filter(cmd => !['ls', 'iloveu'].includes(cmd)).join('\n')}`,
     clear: ''
   };
