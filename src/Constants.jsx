@@ -10,7 +10,17 @@ export const COMMANDS = [
     cv: 'CV work in progress, check back later.',
     contact: 'Email: nicolatte25@gmail.com \nLinkedIn: https://www.linkedin.com/in/nickz_leh/',
     beer: '🍺 Cheers! Enjoy a cold one.',
-    iloveu: 'ILOVEUUUUTOOOOMYBABYYDFSKJGHKHFG! ❤️',
+    iloveu: (
+      <div className="space-y-2">
+        <div className="text-pink-400 font-bold">
+          ILOVEUUUUTOOOOMYBABYYMUAHHHH! ❤️
+        </div>
+        <img
+          src="/img/profile1.jpg"
+          className="max-w-xs"
+        />
+      </div>
+    ),
     ls: `Menu\n----\n${COMMANDS.filter(cmd => !['ls', 'iloveu'].includes(cmd)).join('\n')}`,
     clear: ''
   };
